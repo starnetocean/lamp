@@ -7,11 +7,11 @@
 
 = 详情 =
 
-1、使用putty或类似的SSH工具登陆。
-2、安装LAMP
-1) 禁用SeLinux
-终端里运行以下命令：
-vi /etc/selinux/config
+<p>1、使用putty或类似的SSH工具登陆。</p>
+<p>2、安装LAMP
+<p>1) 禁用SeLinux
+<p>终端里运行以下命令：
+<code>vi /etc/selinux/config</code>
 如果其中显示SELINUX=disabled则继续执行2）即可
 如果不是，则需运行以下命令：
 cd /root #进入根目录
