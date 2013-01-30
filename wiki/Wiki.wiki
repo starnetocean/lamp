@@ -9,7 +9,7 @@
 
 <p>1、使用putty或类似的SSH工具登陆。</p>
 <p>2、安装LAMP</p>
-<p>1) 禁用SeLinux</p>
+<p>1)禁用SeLinux</p>
 <p>终端里运行以下命令：</p>
 <code>vi /etc/selinux/config</code>
 <p>如果其中显示SELINUX=disabled则继续执行下一步即可</p>
