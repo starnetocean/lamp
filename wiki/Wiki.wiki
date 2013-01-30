@@ -1,11 +1,11 @@
 #summary One-sentence summary of this page.
 
-= Introduction =
+= 简介 =
 
 这是一个自动安装LAMP环境的脚本。
 
 
-= Details =
+= 详情 =
 
 1、使用putty或类似的SSH工具登陆。
 2、安装LAMP
