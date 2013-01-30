@@ -8,25 +8,27 @@
 = 详情 =
 
 <p>1、使用putty或类似的SSH工具登陆。</p>
-<p>2、安装LAMP
-<p>1) 禁用SeLinux
-<p>终端里运行以下命令：
+<p>2、安装LAMP</p>
+<p>1) 禁用SeLinux</p>
+<p>终端里运行以下命令：</p>
 <code>vi /etc/selinux/config</code>
-如果其中显示SELINUX=disabled则继续执行2）即可
-如果不是，则需运行以下命令：
-cd /root #进入根目录
+<p>如果其中显示SELINUX=disabled则继续执行下一步即可</p>
+<p>如果不是，则需运行以下命令：</p>
+<code>cd /root #进入根目录
 wget http://teddysun.googlecode.com/files/lamp1.1.tar.gz #下载文件
 tar -zxvf lamp1.1.tar.gz #解压缩文件
 cd /root/lamp1.1 #进入目录
 chmod +x *.sh #赋予文件夹下所有文件执行权限
 ./disable.sh
-回车脚本执行完毕，根据提示重启机器。输入shutdown -r now 或者reboot
+</code>
+<p>回车脚本执行完毕，根据提示重启机器。</p>
+<p>输入shutdown -r now 或者reboot</p>
 
-2)运行一键安装包的脚本文件。
-cd /root/lamp1.1 #进入目录
-./lamp.sh 2>&1 | tee lamp.log #执行安装脚本
+<p>2)运行一键安装包的脚本文件。</p>
+<code>cd /root/lamp1.1 #进入目录
+./lamp.sh 2>&1 | tee lamp.log #执行安装脚本</code>
 
-回车后出现如下界面：
+<p>回车后出现如下界面：</p>
 Please input the root password of MySQL:（提示输入Mysql的root用户密码）
 如果不输入直接回车，则设为默认密码：root
 输入完成后，显示MySQL password:你输入的密码
