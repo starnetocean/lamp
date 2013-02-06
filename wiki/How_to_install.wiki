@@ -15,9 +15,9 @@
 <p>如果其中显示SELINUX=disabled则继续执行下一步即可</p>
 <p>如果不是，则需运行以下命令：</p>
 <code> cd /root #进入根目录
-wget http://teddysun.googlecode.com/files/lamp1.1.tar.gz #下载1.1版
-tar -zxvf lamp1.1.tar.gz #解压缩文件
-cd /root/lamp1.1 #进入目录
+wget http://teddysun.googlecode.com/files/lamp1.2.tar.gz #下载1.1版
+tar -zxvf lamp1.2.tar.gz #解压缩文件
+cd /root/lamp1.2 #进入目录
 chmod +x *.sh #赋予文件夹下所有文件执行权限
 ./disable.sh
 </code>
