@@ -12,7 +12,7 @@
 <p>1)禁用SeLinux功能</p>
 <p>终端里运行以下命令：</p>
 <code> cd /root #进入根目录
-wget http://teddysun.googlecode.com/files/lamp1.2.1.tar.gz #下载1.1版
+wget http://teddysun.googlecode.com/files/lamp1.2.1.tar.gz #下载1.2.1版
 tar -zxvf lamp1.2.1.tar.gz #解压缩文件
 cd /root/lamp1.2.1 #进入目录
 chmod +x *.sh #赋予文件夹下所有文件执行权限
