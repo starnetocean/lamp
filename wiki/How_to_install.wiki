@@ -12,16 +12,16 @@
 <p>1)禁用SeLinux功能</p>
 <p>终端里运行以下命令：</p>
 <code> cd /root #进入根目录
-wget http://teddysun.googlecode.com/files/lamp1.3.tar.gz #下载1.3版
-tar -zxvf lamp1.3.tar.gz #解压缩文件
-cd /root/lamp1.3 #进入目录
+wget http://teddysun.googlecode.com/files/lamp1.3.1.tar.gz #下载1.3版
+tar -zxvf lamp1.3.1.tar.gz #解压缩文件
+cd /root/lamp1.3.1 #进入目录
 chmod +x *.sh #赋予文件夹下所有文件执行权限
 ./disable.sh
 </code>
 <p>回车执行脚本。</p>
 
 <p>2)运行一键安装包的脚本文件。</p>
-<code> cd /root/lamp1.3 #进入目录
+<code> cd /root/lamp1.3.1 #进入目录
 ./lamp.sh 2>&1 | tee lamp.log #执行安装脚本</code>
 
 <p>回车后出现如下界面：</p>
