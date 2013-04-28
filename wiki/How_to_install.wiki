@@ -33,7 +33,7 @@ Press any key to start...or Press Ctrl+c to cancel
 
 <p>如果你在之前的步骤输入了正确的选择，到了这一步你随便按下一个键，脚本就会自动完成剩下的事情了。整个安装过程根据机器配置不同，大约耗时40-60分钟。</p>
 
-## 如何升级？
+= 如何升级？ =
 <p>新增了`update.sh`脚本，目的是为了自动检测和升级`PHP、phpMyAdmin`。这两种软件版本更新比较频繁，因此才会有此脚本，一劳永逸。
 安装完`lamp.sh`一段时间后，如果你发现`PHP`或`phpMyAdmin`官网已更新，那即可运行此脚本更新到最新版。</p>
 <code>./update.sh | tee update.log</code>
