@@ -9,19 +9,13 @@
 
 <p>1、使用putty或类似的SSH工具登陆。</p>
 <p>2、安装LAMP</p>
-<p>1)禁用SeLinux功能</p>
-<p>终端里运行以下命令：</p>
-<code> cd /root #进入根目录
-wget http://teddysun.googlecode.com/files/lamp1.3.1.tar.gz #下载1.3.1版
-tar -zxvf lamp1.3.1.tar.gz #解压缩文件
-cd /root/lamp1.3.1 #进入目录
-chmod +x *.sh #赋予文件夹下所有文件执行权限
-./disable.sh
-</code>
-<p>回车执行脚本。</p>
 
-<p>2)运行一键安装包的脚本文件。</p>
-<code> cd /root/lamp1.3.1 #进入目录
+<p>运行一键安装包的脚本文件。</p>
+<code>cd /root #进入根目录
+wget http://teddysun.googlecode.com/files/lamp2.0.tar.gz #下载2.0版
+tar -zxvf lamp2.0.tar.gz #解压缩文件
+cd /root/lamp2.0 #进入目录
+chmod +x *.sh #赋予文件夹下所有文件执行权限
 ./lamp.sh 2>&1 | tee lamp.log #执行安装脚本</code>
 
 <p>回车后出现如下界面：</p>
@@ -38,3 +32,8 @@ Press any key to start...or Press Ctrl+c to cancel
 （提示你输入任何键继续，或者按Ctrl+c取消安装）</code>
 
 <p>如果你在之前的步骤输入了正确的选择，到了这一步你随便按下一个键，脚本就会自动完成剩下的事情了。整个安装过程根据机器配置不同，大约耗时40-60分钟。</p>
+
+## 如何升级？
+<p>新增了`update.sh`脚本，目的是为了自动检测和升级`PHP、phpMyAdmin`。这两种软件版本更新比较频繁，因此才会有此脚本，一劳永逸。
+安装完`lamp.sh`一段时间后，如果你发现`PHP`或`phpMyAdmin`官网已更新，那即可运行此脚本更新到最新版。</p>
+<code>./update.sh | tee update.log</code>
