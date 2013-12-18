@@ -1,7 +1,6 @@
 ## 简介
 * 1.  `LAMP` 指的是 `Linux` + `Apache` + `MySQL` + `PHP` 运行环境
-* 2.	`LAMP` 一键安装是用 `Linux Shell` 语言编写的，用于在 `Linux` 系统(`Redhat`/`CentOS`/`Fedora`)上一键安装 `LAMP`环境的工具脚本。
-* **关于本脚本**：支持`PHP`自带所有组件；第三方组件支持`Zend`和`XCache`(可选安装)；支持`MySQL`和`SQLite`数据库;支持OCI8组件（可让`PHP`连接`Oracle`数据库）；命令行新增虚拟主机，操作简便；自助升级`PHP`和`phpMyAdmin`版本；支持创建`FTP`用户；卸载简便
+* 2.  `LAMP` 一键安装是用 `Linux Shell` 语言编写的，用于在 `Linux` 系统(`Redhat`/`CentOS`/`Fedora`)上一键安装 `LAMP`环境的工具脚本。
 
 ## 本脚本的系统需求
 * 需要`2GB`及以上磁盘剩余空间
@@ -9,13 +8,23 @@
 * 服务器必须配置好软件源和可连接外网
 * 必须具有系统`Root`权限
 * 建议使用干净系统全新安装
-* Release日期：2013年12月5日
+* 日期：2013年12月18日
+
+## 关于本脚本
+* 支持`PHP`自带所有组件；
+* 第三方组件支持`Zend`和`XCache`(可选安装)；
+* 支持`MySQL`和`SQLite`数据库;
+* 支持OCI8组件（可让`PHP`连接`Oracle`数据库）；
+* 命令行新增虚拟主机，操作简便；
+* 自助升级`PHP`和`phpMyAdmin`版本；
+* 支持创建`FTP`用户；
+* 卸载简便。
 
 ## 将会安装
-* 1、`Apache 2.4.6`
+* 1、`Apache 2.4.7`
 * 2、`MySQL 5.6.15`
-* 3、`PHP 5.4.22`
-* 4、`phpMyAdmin 4.0.10`
+* 3、`PHP 5.4.23`
+* 4、`phpMyAdmin 4.1.1`
 * 5、`xcache 3.1.0` (推荐安装)
 * 6、`OCI8 + oracle-instantclient`（可选安装，支持`PHP`连接`Oracle`数据库）
 * 7、`pure-ftpd-1.0.36`（可选安装）
@@ -50,14 +59,14 @@
 
 安装完`lamp.sh`一段时间后，如果你发现`PHP`或`phpMyAdmin`官网已更新，那即可运行此脚本更新到最新版。
 
-因PHP5.5.x系列Release没多久，很多软件还不兼容该版本，因此脚本升级PHP的版本为5.4.x系列的最新版。
+因PHP5.5.x系列Release没多久，很多软件还不兼容该版本，因此本脚本升级的PHP版本为5.4.x系列的最新版。
 ###使用方法：
 
     ./update.sh | tee update.log
 
-**注意:**
+**FAQ**
 
-1、执行脚本时出现下面的错误提示时。
+1、执行脚本时出现下面的错误提示时该怎么办？
 
     -bash: ./lamp.sh: /bin/bash^M: bad interpreter: No such file or directory
 
@@ -71,15 +80,16 @@
 
 回车后，输入ZZ（两个大写字母Z），即可保存退出。
 
-2、Oracle数据库连接错误排查
-一般连接外部oracle服务器那一步骤时，可能会出现`ORA-24408:could not generate unique server group name`这样的错误，解决办法是在`hosts`中将主机名添加即可：
+2、连接外部`Oracle`服务器出现`ORA-24408:could not generate unique server group name`这样的错误怎么办？
+解决办法是在`hosts`中将主机名添加即可：
 
     vi /etc/hosts
 
     127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4 test
     ::1 localhost localhost.localdomain localhost6 localhost6.localdomain6 test
 
-上面的代码中，`test`即为主机名。然后重启网络服务即可。
+上面的示例中，最后的那个`test`即为主机名。更改完毕后，输入ZZ（两个大写字母Z），即可保存退出。
+然后重启网络服务即可。
 
     service network restart
 
