@@ -16,13 +16,13 @@ cur_dir=`pwd`
 #download pure-ftpd 
 cd $cur_dir
 if [ -s pure-ftpd-1.0.36.tar.gz ]; then
-	echo "pure-ftpd-1.0.36.tar.gz [found]"
+    echo "pure-ftpd-1.0.36.tar.gz [found]"
 else
-	echo "pure-ftpd-1.0.36.tar.gz not found!!!download now......"
-	if ! wget -c http://teddysun.googlecode.com/files/pure-ftpd-1.0.36.tar.gz;then
-		echo "Failed to download pure-ftpd-1.0.36.tar.gz,please download it to /lamp directory manually and rerun the install script."
-		exit 1
-	fi
+    echo "pure-ftpd-1.0.36.tar.gz not found!!!download now......"
+    if ! wget -c http://teddysun.googlecode.com/files/pure-ftpd-1.0.36.tar.gz;then
+        echo "Failed to download pure-ftpd-1.0.36.tar.gz,please download it to /lamp directory manually and rerun the install script."
+        exit 1
+    fi
 fi
 
 #install pure-ftpd 
