@@ -45,9 +45,8 @@ service pure-ftpd start
 #see if iptables is start
 /sbin/service iptables status 1>/dev/null 2>&1
 if [ $? -eq 0 ]; then
-/sbin/iptables -A INPUT -p tcp -m tcp --dport 21 -j ACCEPT  
+/sbin/iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 21 -j ACCEPT
 /etc/rc.d/init.d/iptables save
-echo 'IPTABLES_MODULES="ip_conntrack_ftp"' >>/etc/sysconfig/iptables-config
 /etc/init.d/iptables restart
 fi
 echo "============================pure-ftpd install completed============================================"
